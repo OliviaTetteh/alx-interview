@@ -10,12 +10,12 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    triangle = [[1]]
-    while len(triangle) != n:
-        previous = triangle[-1]
+    answer = [[1]]
+    while len(answer) != n:
+        previous = answer[-1]
         current = [1]
         for i in range(len(previous) - 1):
             current.append(previous[i] + previous[i + 1])
         current.append(1)
-        triangle.append(current)
-    return triangle
+        answer.append(current)
+    return answer
